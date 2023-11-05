@@ -79,7 +79,7 @@ body {
         }
     
         100% {
-            transform: translateY(-10vh) scale(3);
+            transform: translateY(-10vh) scale(5);
         }
     }
 }
