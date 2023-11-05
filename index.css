@@ -1,0 +1,313 @@
+/* Colour palatte */
+:root {
+    --neon-green: #65e0ce;
+    --dark-green: #1e423d;
+    --light-green: #55bdad;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--black);
+}
+
+.bg-animation {
+    z-index: -100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    z-index: -100;
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 50px;
+    
+    background: #4fc3dc;
+    margin: 0 13px;
+    box-shadow: 0 0 0 5px #4fc3dc44, 0 0  10px #4fc3dc, 0 0 15px #4fc3dc;
+    animation: animate 30s linear infinite;
+    animation-duration: calc(200s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 5px #ff2d7544, 0 0 10px #ff2d75, 0 0 15px #ff2d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bubbles span {
+        margin: 0 3px;
+        width: 40px;
+        aspect-ratio: 1/1;
+        box-shadow: 0 0 0 1px #4fc3dc44, 0 0  2px #4fc3dc, 0 0 3px #4fc3dc;
+    }
+
+    .bubbles span:nth-child(even) {
+        box-shadow: 0 0 0 1px #ff2d7544, 0 0 2px #ff2d75, 0 0 3px #ff2d75;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateY(100vh) scale(0);
+        }
+    
+        100% {
+            transform: translateY(-10vh) scale(2);
+        }
+    }
+}
+
+
+.nav {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .surround {
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: #000000;
+        margin: 10px;
+        border-radius: 8px;
+        padding: 2px;
+        display: flex;
+        text-align: center;
+    }
+
+    .nav-list {
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 8px;
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-link {
+        color: var(--white);
+    }
+
+    .nav-link:hover {
+        color: var(--neon-green);
+    }
+}
+
+#intro-section {
+    z-index: 0;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    place-content: center;
+
+    .intro-start {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+
+        .display-1 {
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .h4 {
+            color: var(--light-green);
+            min-width: 300px;
+            font-weight: bold;
+            text-align: start;
+        }
+
+        .h4 span {
+            position: absolute;
+            margin-left: 6px;
+        }
+
+        .h4 span::before {
+            content: "Web Developer";
+            color: var(--neon-green);
+            animation: words 20s infinite;
+        }
+
+        .h4 span::after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 8px);
+            height: 100%;
+            background-color: var(--black);
+            border-left: 2px solid var(--neon-green);
+            right: -8px;
+            animation: cursor .8s infinite, typing 20s steps(14) infinite;
+        }
+    }
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #1e423d;
+    }
+}
+
+@keyframes words {
+    0%,20% {
+        content: "Web Developer"
+    }
+    21%,40% {
+        content: "Android Developer"
+    }
+    41%,60% {
+        content: "UI/UX Designer"
+    }
+    61%,80% {
+        content: "Gamer"
+    }
+    81%,100% {
+        content: "Student"
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
+}
+
+
+#about-section {
+    z-index: 0;
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 100px;
+
+    .h3 {
+        padding-top: 70px;
+        padding-bottom: 50px;
+        text-align: center;
+        color: var(--neon-green);
+        font-weight: bold;
+    }
+
+    .about-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .item {
+            display: flex;
+            justify-content: center;
+            color: var(--white);
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .Pic {
+            aspect-ratio: 1/1;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .text {
+            text-align: start;
+            max-width: 300px;
+        }
+    }
+
+    .expertise-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Pic {
+            aspect-ratio: 1/1;
+            width: 200px;
+            object-fit: cover;
+        }
+    }
+}
+
+#project-section {
+    z-index: 0;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    .h3 {
+        padding-top: 70px;
+        text-align: center;
+        color: var(--neon-green);
+        font-weight: bold;
+    }
+}
+
+#contact-section {
+    height: 40vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    .h3 {
+        padding-top: 50px;
+        text-align: center;
+        color: var(--neon-green);
+        font-weight: bold;
+    }
+
+    .contact-wrap {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-content {
+        color: var(--white);
+
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+}
