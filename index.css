@@ -5,6 +5,7 @@
     --light-green: #55bdad;
     --white: #ffffff;
     --black: #000000;
+    --dark-blue: #051640;
 }
 
 * {
@@ -198,10 +199,11 @@ body {
 
 
 #about-section {
+    background: linear-gradient(var(--black), var(--dark-blue), var(--black));
     z-index: 0;
     width: 100%;
     min-height: 100vh;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 
     .h3 {
         padding-top: 70px;
@@ -231,6 +233,7 @@ body {
             object-fit: cover;
             display: block;
             object-position: center;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
         }
 
         .blur-load {
@@ -259,11 +262,13 @@ body {
             aspect-ratio: 1/1;
             width: 200px;
             object-fit: cover;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
         }
     }
 }
 
 #project-section {
+    background: linear-gradient(var(--black), #04222E, var(--black));
     z-index: 0;
     min-height: 100vh;
     width: 100%;
