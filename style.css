@@ -1,4 +1,6 @@
-/* Colour palatte */
+/* **************************************** */
+/* Colour Palatte */
+/* **************************************** */
 :root {
     --neon-green: #65e0ce;
     --dark-green: #1e423d;
@@ -7,6 +9,10 @@
     --black: #000000;
     --dark-blue: #051640;
 }
+
+/* **************************************** */
+/* Default */
+/* **************************************** */
 
 * {
     font-family: "Poppins", sans-serif;
@@ -20,6 +26,10 @@ body {
     min-height: 100vh;
     background-color: var(--black);
 }
+
+/* **************************************** */
+/* Index Background Animation */
+/* **************************************** */
 
 .bg-animation {
     z-index: -100;
@@ -41,8 +51,8 @@ body {
     width: 50px;
     
     background: #4fc3dc;
-    margin: 0 13px;
-    box-shadow: 0 0 0 5px #4fc3dc44, 0 0  10px #4fc3dc, 0 0 15px #4fc3dc;
+    margin: 0 8px;
+    box-shadow: 0 0 0 5px #4fc3dc44, 0 0 10px #4fc3dc, 0 0 15px #4fc3dc;
     animation: animate 30s linear infinite;
     animation-duration: calc(200s / var(--i));
 }
@@ -62,7 +72,7 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 690px) {
     .bubbles span {
         margin: 0 3px;
         width: 40px;
@@ -85,6 +95,9 @@ body {
     }
 }
 
+/* **************************************** */
+/* Navbar */
+/* **************************************** */
 
 .nav {
     position: absolute;
@@ -111,6 +124,10 @@ body {
     }
 }
 
+/* **************************************** */
+/* Intro Section */
+/* **************************************** */
+
 #intro-section {
     z-index: 0;
     min-height: 100vh;
@@ -133,10 +150,13 @@ body {
             font-weight: bold;
         }
 
+/* **************************************** */
+/* I'm a ____ Animation */
+/* **************************************** */
+
         .h4 {
             color: var(--light-green);
             min-width: 300px;
-            font-weight: bold;
             text-align: start;
         }
 
@@ -156,6 +176,7 @@ body {
             position: absolute;
             width: calc(100% + 8px);
             height: 100%;
+            color: var(--black);
             background-color: var(--black);
             border-left: 2px solid var(--neon-green);
             right: -8px;
@@ -164,9 +185,11 @@ body {
     }
 }
 
+
+
 @keyframes cursor {
     to {
-        border-left: 2px solid #1e423d;
+        border-left: 3px solid #1e423d;
     }
 }
 
@@ -197,6 +220,9 @@ body {
     }
 }
 
+/* **************************************** */
+/* About Section */
+/* **************************************** */
 
 #about-section {
     background: linear-gradient(var(--black), var(--dark-blue), var(--black));
@@ -234,6 +260,7 @@ body {
             display: block;
             object-position: center;
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
         }
 
         .blur-load {
@@ -252,10 +279,40 @@ body {
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
+        margin: 20px;
 
         .box {
             display: flex;
-            flex-direction: column;
+            width: 300px;
+            height: 200px;
+            background-color: rgba(129, 143, 180, 0.4);
+            border-radius: 8px;
+            transition: 0.5s;
+        }
+
+        .box:hover {
+            box-shadow: 3px 3px 10px rgb(129, 143, 180);
+            width: 400px;
+            transition: 0.5s;
+            .box-text {
+                transition: 0.5s;
+                color: var(--white);
+            }
+
+        }
+
+        .box-text {
+            transition: 0.5s;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 30px;
+            padding: 10px;
+            flex-wrap: wrap;
+            color: var(--black);
         }
 
         .Pic {
@@ -266,6 +323,10 @@ body {
         }
     }
 }
+
+/* **************************************** */
+/* Project Feature Section */
+/* **************************************** */
 
 #project-section {
     background: linear-gradient(var(--black), #04222E, var(--black));
@@ -282,6 +343,40 @@ body {
         font-weight: bold;
     }
 }
+
+.feature-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.f-project {
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.f-project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.f-project:hover {
+    width: 500px;
+    height: 550px;
+    transition: 0.5s;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* **************************************** */
+/* Contact Section */
+/* **************************************** */
 
 #contact-section {
     height: 40vh;
@@ -311,4 +406,70 @@ body {
         }
     }
 
+}
+
+/* **************************************** */
+/* Project Template */
+/* **************************************** */
+
+.project-title {
+    width: 100%;
+    text-align: center;
+    color: var(--neon-green);
+    padding-top: 90px;
+    font-weight: bold;
+}
+
+.project-main {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.project-main-img {
+    width: 400px;
+    object-fit:scale-down;
+    object-position: 50% 100%;
+}
+
+.project-desc {
+    width: 500px;
+    color: var(--white)
+}
+
+.project-link-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 100px;
+}
+
+.project-essentials {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-essentials-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-essentials h4 {
+    color: var(--light-green);
+    margin: 0;
+}
+
+.p-line {
+    width: 150px;
+    height: 1px;
+    background-color: var(--light-green);
+}
+
+.project-link {
+    margin-top: 10px;
+    color: var(--white);
 }
