@@ -49,17 +49,19 @@ body {
     position: relative;
     aspect-ratio: 1/1;
     width: 50px;
+    opacity: 0.1;
 
-    background: #4fc3dc;
+    background: white;
+    border-radius: 8px;
     margin: 0 8px;
-    box-shadow: 0 0 0 5px #4fc3dc44, 0 0 10px #4fc3dc, 0 0 15px #4fc3dc;
+    box-shadow: 0 0 0 2px white, 0 0 4px white, 0 0 6px white;
     animation: animate 30s linear infinite;
     animation-duration: calc(200s / var(--i));
 }
 
 .bubbles span:nth-child(even) {
-    background: #ff2d75;
-    box-shadow: 0 0 0 5px #ff2d7544, 0 0 10px #ff2d75, 0 0 15px #ff2d75;
+    background: white;
+    box-shadow: 0 0 0 2px white, 0 0 4px white, 0 0 6px white;
 }
 
 @keyframes animate {
@@ -74,10 +76,11 @@ body {
 
 @media screen and (max-width: 690px) {
     .bubbles span {
+        border-radius: 8px;
         margin: 0 3px;
         width: 40px;
         aspect-ratio: 1/1;
-        box-shadow: 0 0 0 1px #4fc3dc44, 0 0 2px #4fc3dc, 0 0 3px #4fc3dc;
+        box-shadow: 0 0 0 1px white, 0 0 2px white, 0 0 3px white,
     }
 
     .bubbles span:nth-child(even) {
@@ -114,14 +117,19 @@ body {
         list-style-type: none;
         margin: 15px;
         padding: 0;
+        overflow: hidden;
     }
 
     .nav-link {
         color: var(--white);
     }
 
-    .nav-link:hover {
-        color: var(--neon-green);
+    .nav-item:hover {
+        background-color: white;
+
+        .nav-link {
+            color: black;
+        }
     }
 }
 
@@ -291,6 +299,12 @@ body {
             object-position: center;
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
             border-radius: 8px;
+            transition: 0.5s;
+        }
+
+        .Pic:hover {
+            filter: grayscale(100%);
+            transition: 0.5s;
         }
 
         .blur-load {
@@ -314,49 +328,36 @@ body {
         gap: 20px;
         justify-content: center;
         margin: 20px;
+    }
 
-        .box {
-            display: flex;
-            width: 300px;
-            height: 200px;
-            background-color: rgba(129, 143, 180, 0.4);
-            border-radius: 8px;
-            transition: 0.5s;
-        }
+    .text-group {
+        width: 600px;
+    }
 
-        .box:hover {
-            box-shadow: 3px 3px 10px rgb(129, 143, 180);
-            width: 400px;
-            transition: 0.5s;
+    .text-bg {
+        color: var(--white);
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 8px;
+    }
 
-            .box-text {
-                transition: 0.5s;
-                color: var(--white);
-            }
+    .exp-cat {
+        float: right;
+        display: none;
+        font-size: 20px;
+    }
 
-        }
+    .text-bg:hover {
+        transition: 0.5s;
+        background-color: var(--white);
+        color: black;
 
-        .box-text {
-            transition: 0.5s;
-            height: 100%;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 30px;
-            padding: 10px;
-            flex-wrap: wrap;
-            color: var(--black);
-        }
-
-        .Pic {
-            aspect-ratio: 1/1;
-            width: 200px;
-            object-fit: cover;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        .exp-cat {
+            display: block;
+            color: black;
         }
     }
+
 }
 
 @keyframes expertise-float {
@@ -364,13 +365,9 @@ body {
         transform: translate(0);
     }
 
-    50% {
+    50% {}
 
-    }
-
-    100% {
-
-    }
+    100% {}
 }
 
 /* **************************************** */
@@ -417,8 +414,6 @@ body {
 }
 
 .f-project:hover {
-    width: 500px;
-    height: 550px;
     transition: 0.5s;
     box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
 }
@@ -447,11 +442,25 @@ body {
     }
 
     .contact-content {
-        color: var(--white);
+        color: white;
 
         .link {
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .con-g {
+            width: 100%;
+            padding: 10px;
             text-decoration: none;
             color: inherit;
+            border-radius: 8px;
+        }
+
+        .con-g:hover {
+            background-color: white;
+            color: black;
         }
     }
 
