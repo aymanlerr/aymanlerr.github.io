@@ -360,16 +360,6 @@ body {
 
 }
 
-@keyframes expertise-float {
-    0% {
-        transform: translate(0);
-    }
-
-    50% {}
-
-    100% {}
-}
-
 /* **************************************** */
 /* Project Feature Section */
 /* **************************************** */
@@ -378,9 +368,11 @@ body {
     background: linear-gradient(var(--black), #04222E, var(--black));
     z-index: 0;
     min-height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
+    position: relative;
 
     .h3 {
         padding-top: 70px;
@@ -397,6 +389,9 @@ body {
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
 }
 
 .f-project {
@@ -404,7 +399,11 @@ body {
     height: 500px;
     border-radius: 8px;
     transition: 0.5s;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    position: relative;
 }
+
 
 .f-project img {
     width: 100%;
@@ -413,9 +412,40 @@ body {
     border-radius: 8px;
 }
 
-.f-project:hover {
+.f-project p {
+    color: black;
+    font-weight: bold;
+    top: 0;
     transition: 0.5s;
-    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+    font-size: 70px;
+    opacity: 0;
+}
+
+.f-project-desc {
+    transition: 0.5s;
+}
+
+.f-center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+
+.f-project:hover {
+    .f-img {
+        opacity: 0.1;
+        transition: 0.5s;
+        filter: blur(50px);
+    }
+
+    .f-project-desc {
+        opacity: 1;
+        transition: 0.5s;
+    }
 }
 
 /* **************************************** */
