@@ -293,7 +293,7 @@ body {
 
         .Pic {
             aspect-ratio: 1/1;
-            max-width: 300px;
+            width: 300px;
             object-fit: cover;
             display: block;
             object-position: center;
@@ -351,6 +351,7 @@ body {
         transition: 0.5s;
         background-color: var(--white);
         color: black;
+        scale: 1.1;
 
         .exp-cat {
             display: block;
@@ -560,4 +561,107 @@ body {
 .project-link {
     margin-top: 10px;
     color: var(--white);
+}
+
+/* **************************************** */
+/* Project Navbar */
+/* **************************************** */
+
+.list-bg {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.list {
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    list-style-type: none;
+    margin: 15px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.list-item {
+    color: var(--white);
+    padding: 8px;
+}
+
+.item {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.list-item:hover {
+    background-color: white;
+
+    .item {
+        color: black;
+    }
+}
+
+/* **************************************** */
+/* List of Projects */
+/* **************************************** */
+
+.pl-title {
+    width: 100%;
+    text-align: center;
+    color: var(--neon-green);
+    padding-top: 150px;
+    font-weight: bold;
+}
+
+.pl-container {
+    width: 100%;
+    min-height: 50vh;
+    height: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pl-card {
+    position: relative;
+    width: 250px;
+    min-height: 400px;
+    height: 100%;
+    background-color: black;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+}
+
+.pl-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
+}
+
+.pl-desc {
+    color: white;
+    padding: 5px;
+}
+
+.pl-link {
+    text-decoration: none;
+}
+
+.pl-card:hover {
+    scale: 1.2;
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.5);
+
+    .pl-desc {
+        color: black;
+    }
 }
