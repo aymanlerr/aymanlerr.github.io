@@ -49,7 +49,7 @@ body {
     position: relative;
     aspect-ratio: 1/1;
     width: 50px;
-    
+
     background: #4fc3dc;
     margin: 0 8px;
     box-shadow: 0 0 0 5px #4fc3dc44, 0 0 10px #4fc3dc, 0 0 15px #4fc3dc;
@@ -77,7 +77,7 @@ body {
         margin: 0 3px;
         width: 40px;
         aspect-ratio: 1/1;
-        box-shadow: 0 0 0 1px #4fc3dc44, 0 0  2px #4fc3dc, 0 0 3px #4fc3dc;
+        box-shadow: 0 0 0 1px #4fc3dc44, 0 0 2px #4fc3dc, 0 0 3px #4fc3dc;
     }
 
     .bubbles span:nth-child(even) {
@@ -88,7 +88,7 @@ body {
         0% {
             transform: translateY(100vh) scale(0);
         }
-    
+
         100% {
             transform: translateY(-10vh) scale(5);
         }
@@ -113,6 +113,7 @@ body {
         display: flex;
         list-style-type: none;
         margin: 15px;
+        padding: 0;
     }
 
     .nav-link {
@@ -150,9 +151,9 @@ body {
             font-weight: bold;
         }
 
-/* **************************************** */
-/* I'm a ____ Animation */
-/* **************************************** */
+        /* **************************************** */
+        /* I'm a ____ Animation */
+        /* **************************************** */
 
         .h4 {
             color: var(--light-green);
@@ -194,28 +195,57 @@ body {
 }
 
 @keyframes words {
-    0%,20% {
+
+    0%,
+    20% {
         content: "Web Developer"
     }
-    21%,40% {
+
+    21%,
+    40% {
         content: "Android Developer"
     }
-    41%,60% {
+
+    41%,
+    60% {
         content: "UI/UX Designer"
     }
-    61%,80% {
+
+    61%,
+    80% {
         content: "Gamer"
     }
-    81%,100% {
+
+    81%,
+    100% {
         content: "Student"
     }
 }
 
 @keyframes typing {
-    10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
         width: 0;
     }
-    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
         width: calc(100% + 8px);
     }
 }
@@ -252,7 +282,7 @@ body {
             gap: 20px;
             flex-wrap: wrap;
         }
-        
+
         .Pic {
             aspect-ratio: 1/1;
             max-width: 300px;
@@ -274,6 +304,10 @@ body {
         }
     }
 
+    /* **************************************** */
+    /* Expertise Section */
+    /* **************************************** */
+
     .expertise-container {
         display: flex;
         flex-wrap: wrap;
@@ -294,6 +328,7 @@ body {
             box-shadow: 3px 3px 10px rgb(129, 143, 180);
             width: 400px;
             transition: 0.5s;
+
             .box-text {
                 transition: 0.5s;
                 color: var(--white);
@@ -321,6 +356,20 @@ body {
             object-fit: cover;
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
         }
+    }
+}
+
+@keyframes expertise-float {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+
+    }
+
+    100% {
+
     }
 }
 
@@ -430,7 +479,7 @@ body {
 
 .project-main-img {
     width: 400px;
-    object-fit:scale-down;
+    object-fit: scale-down;
     object-position: 50% 100%;
 }
 
