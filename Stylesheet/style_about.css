@@ -11,13 +11,12 @@ h1 {
 .intro {
     display: flex;
     justify-content: center;
-    gap: 100px;
-    padding: 50px;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin: 30px;
 }
 
-.intro-left {
-    overflow: hidden;
-}
+/* s */
 
 .text {
     color: white;
@@ -42,8 +41,10 @@ h1 {
 }
 
 @media (max-width: 376px) {
-    .intro {
-        padding: 20px;
+    .hobby-pic {
+        width: 300px;
+        display: flex;
+        justify-content: center;
     }
 }
 
