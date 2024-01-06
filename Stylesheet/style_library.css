@@ -19,7 +19,7 @@ p {
 }
 
 .category {
-    h3 {
+    h2 {
         color: white;
         margin-top: 0;
     }
@@ -28,6 +28,12 @@ p {
         display: flex;
         justify-content: center;
         gap: 30px;
+
+        .active-cat {
+            background-color: var(--highlight);
+            color: var(--dark-gray);
+            transition: 0.6s;
+        }
     }
     
     button {
@@ -49,13 +55,9 @@ p {
     button:not(.active) {
         cursor: pointer;
     }
-
-    .active {
-        background-color: var(--highlight);
-        color: var(--dark-gray);
-        transition: 0.6s;
-    }
 }
+
+
 
 .main-content {
     margin: 80px 30px 0 30px;

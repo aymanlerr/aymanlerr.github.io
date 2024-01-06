@@ -1,10 +1,4 @@
 /* **************************** */
-/* Font imports */
-/* **************************** */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
-
-
-/* **************************** */
 /* Defaults */
 /* **************************** */
 
@@ -70,24 +64,24 @@ body {
     z-index: 2;
 }
 
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    transition: 0.6s;
+}
+
 .nav-links {
     padding: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     font-size: 18px;
+    margin-top: 20px;
 }
 
-.link {
-    color: white;
-}
-
-.menu li.active {
-    background-color: white;
-
-    .link {
-        color: black;
-    }
+.nav-links [type=checkbox] {
+    display: none;
 }
 
 .menu {
@@ -96,30 +90,32 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     overflow: hidden;
-}
 
-.menu li:hover {
-    background-color: white;
-    transition: 0.6s;
+    .menu-box {
+        padding: 10px;
+    }
 
     .link {
-        color: black;
+        color: white;
     }
-}
 
-.menu li {
-    padding: 10px 15px 10px 15px;
-}
+    .active {
+        background-color: white;
+    
+        .link {
+            color: black;
+        }
+    }
 
-.nav-links [type=checkbox] {
-    display: none;
-}
+    .menu-box:hover {
+        background-color: white;
+        transition: 0.6s;
+        .link {
+            color: black;
+        }
 
-.hamburger {
-    display: none;
-    font-size: 24px;
-    user-select: none;
-    transition: 0.6s;
+    }
+    
 }
 
 .footer {
@@ -153,6 +149,10 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
+
+    h2 {
+        color: var(--highlight);
+    }
 
     ul {
         padding: 0;
