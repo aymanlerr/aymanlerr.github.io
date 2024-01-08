@@ -43,6 +43,7 @@ p {
 .layout {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap-reverse;
     gap: 80px;
     margin: 40px;
@@ -95,7 +96,16 @@ p {
     .layout {
         flex-direction: column-reverse;
         gap: 40px;
+        margin: 0px;
         align-items: center;
+    }
+
+    .feature-img {
+        width: 100%;
+    }
+
+    .text-group {
+        width: 90%;
     }
 }
 
