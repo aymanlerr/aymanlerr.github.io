@@ -22,9 +22,19 @@
 
 .welcome p {
     color: var(--highlight);
-    font-size: 2vw;
+    font-size: 30px;
     margin: 0;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .welcome h1 {
+        font-size: 70px;
+    }
+
+    .welcome p {
+        font-size: 22px;
+    }
 }
 
 
@@ -55,10 +65,6 @@
 @media (max-width: 500px) {
     .blob {
         width: 500px;
-    }
-
-    .welcome p {
-        font-size: 15px;
     }
 }
 

@@ -92,6 +92,30 @@ p {
     }
 }
 
+.full-img {
+    border-radius: 8px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.full-img-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .full-img {
+        width: 90%;
+    }
+
+    .full-img-wrap {
+        align-content: center;
+    }
+}
+
+
 @media (max-width: 769px) {
     .layout {
         flex-direction: column-reverse;
