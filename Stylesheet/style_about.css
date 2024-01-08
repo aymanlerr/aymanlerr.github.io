@@ -9,7 +9,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 40px;
 }
 
 .text {
@@ -21,7 +21,11 @@ h1 {
 }
 
 .hobby-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 265px;
+    margin-top: 20px;
 }
 
 .intro-left {
@@ -32,10 +36,15 @@ h1 {
 }
 
 .hobby-pic {
-    margin-top: 20px;
+    height: 100%;
     object-fit: cover;
     width: 100%;
-    height: 265px;
+}
+
+.hobby-container picture {
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .profile-pic {
@@ -44,13 +53,20 @@ h1 {
     height: 500px;
 }
 
-@media (max-width: 376px) {
-    .hobby-pic {
-        width: 300px;
+@media (max-width: 400px) {
+    .intro-left {
+        margin: 20px;
     }
+}
+
+@media (max-width: 376px) {
 
     .text {
-        width: 300px;
+        width: 80%;
+    }
+
+    .hobby-pic {
+        width: 80%;
     }
 
     .intro-left {
@@ -59,21 +75,15 @@ h1 {
 }
 
 @media (max-width: 321px) {
-    .text p {
-        width: 80%;
-    }
 
     .text {
+        width: 80;
         margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 30px;
     }
     
-    .hobby-pic {
-        width: 200px;
-    }
 }
 
 @media (max-width: 769px) {
@@ -82,11 +92,11 @@ h1 {
     }
 
     .profile-pic {
-
         width: 250px;
         height: 400px;
     }
 }
+
 
 @media (max-width: 426px) {
     .intro {
@@ -95,7 +105,7 @@ h1 {
     }
 
     .text {
-        width: 320px;
+        width: 80%;
     }
 
     .pfp-container {
@@ -176,19 +186,16 @@ h1 {
 }
 
 @media (max-width: 769px) {
+    .extras {
+        align-items: center;
+    }
+
     .extras-top {
         flex-direction: column;
         align-items: center;
     }
-
-
 }
 
-@media (max-width: 376px) {
-    .experience-box, .education-box {
-        width: 300px;
-    }
-}
 
 @media (max-width: 426px) {
     .resume-download {
@@ -196,6 +203,17 @@ h1 {
         gap: 0px;
     }
 }
+
+@media (max-width: 376px) {    
+    .experience-box, .education-box, .resume-box {
+        width: 80%;
+    }
+
+    .extras-top {
+        padding: 0;
+    }
+}
+
 
 /* **************************** */
 /* Expertise section */
