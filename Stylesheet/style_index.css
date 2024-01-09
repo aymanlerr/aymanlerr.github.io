@@ -44,13 +44,21 @@
 .welcome .info-wrap {
     display: flex;
     justify-content: center;
-    width: 100%;
     padding: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    p {
+        margin: 0;
+        text-align:end;
+        width: 100%;
+    }
 }
 
 .welcome p {
     color: var(--highlight);
-    max-width: 700px;
+    max-width: 1000px;
     font-size: 20px;
 }
 
@@ -69,6 +77,14 @@
 
     .welcome {
         gap: 0;
+    }
+
+    .welcome .info-wrap {
+        position: relative;
+
+        p {
+            text-align: start;
+        }
     }
 }
 

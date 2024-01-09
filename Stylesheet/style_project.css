@@ -13,6 +13,7 @@
 }
 
 .row {
+    width: 100%;
     display: flex;
     gap: 50px;
     flex-wrap: wrap-reverse;
@@ -20,11 +21,22 @@
 }
 
 .row-reverse {
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
     gap: 50px;
     flex-wrap: wrap-reverse;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .row, .row-reverse {
+        gap: 0;
+    }
+
+    p.description {
+        margin: 0;
+    }
 }
 
 .description {
@@ -52,6 +64,7 @@ p {
 
 .img-desc {
     text-align: center;
+    color: var(--highlight);
 }
 
 .key {
@@ -95,10 +108,11 @@ p {
     }
 
     .img-group {
-        width: 300px;
+        width: 400px;
+        max-width: 450px;
         height: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         justify-content: center;
         overflow: hidden;
         align-items: center;
@@ -146,7 +160,7 @@ p {
     }
 
     .text-group {
-        width: 90%;
+        width: 100%;
     }
 }
 
