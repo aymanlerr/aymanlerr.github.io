@@ -43,81 +43,73 @@
     <section class="main-content">
         <h1 class="title">Movie List App</h1>
         <div class="layout">
-            <div class="text-group">
-                <p class="description">This is a movie list app to track the movies that I have watched. I am required
-                    to enter the relevant fields (movie title, genre, year, rating) to insert the movie. There is input
-                    validation thus I am not able to insert a movie into the list with a blank input field. The list also have a filter function to filter out PG-13 movies for my siblings. I can also edit the movie details.</p>
-                <p class="key">Key features:</p>
-                <ul>
-                    <li>Scrollable movie list</li>
-                    <li>Add/Delete/Edit movie items</li>
-                    <li>Icons generated from website</li>
-                </ul>
-                <p class="key">Software:</p>
-                <ul>
-                    <li>Android Studio</li>
-                </ul>
-                <p class="key">Language:</p>
-                <ul>
-                    <li>Java</li>
-                </ul>
-                <p class="key">Links</p>
-                <p>Github Repository: <a target="_BLANK" alt="Github repo"
-                        href="https://github.com/aymanlerr/P05_MyModules">Click
-                        here</a></p>
-            </div>
-            <div class="slideshow-container">
-                <!-- Add pictures here -->
-                <div class="mySlides fade">
-                    <div class="img-group">
-                        <a target="_blank" href="Images\Code\p6_movieHome.webp">
-                            <picture>
-                                <source type="image/webp" srcset="Images\Code\p6_movieHome.webp">
-                                <source type="image/png" srcset="Images\Code\p6_movieHome.png">
-                                <img src="Images\Code\p6_movieHome.png" alt="Movie Home">
-                            </picture>
-                        </a>
-
-                    </div>
+            <div class="row">
+                <div class="text-group">
+                    <p class="description">This is a movie list app to track the movies that I have watched. I am
+                        required
+                        to enter the relevant fields (movie title, genre, year, rating) to insert the movie. There is
+                        input
+                        validation thus I am not able to insert a movie into the list with a blank input field. The list
+                        also have a filter function to filter out PG-13 movies for my siblings. I can also edit the
+                        movie
+                        details.</p>
+                    <p class="key">Key features:</p>
+                    <ul>
+                        <li>Scrollable movie list</li>
+                        <li>Add/Delete/Edit movie items</li>
+                        <li>Icons generated from website</li>
+                    </ul>
+                    <p class="key">Software:</p>
+                    <ul>
+                        <li>Android Studio</li>
+                    </ul>
+                    <p class="key">Language:</p>
+                    <ul>
+                        <li>Java</li>
+                    </ul>
+                    <p class="key">Links</p>
+                    <p>Github Repository: <a target="_BLANK" alt="Github repo"
+                            href="https://github.com/aymanlerr/P05_MyModules">Click
+                            here</a></p>
+                </div>
+                <div class="img-group">
+                    <a target="_blank" href="Images\Code\p6_movieHome.webp">
+                        <img src="Images\Code/movieList/movieListHome.webp" alt="Movie Home">
+                    </a>
                     <p class="img-desc">Home page</p>
                 </div>
+            </div>
 
-                <div class="mySlides fade">
-                    <div class="img-group">
-                        <a target="_blank" href="Images\Code\p6_movieList.webp">
-                            <picture>
-                                <source type="image/webp" srcset="Images\Code\p6_movieList.webp">
-                                <source type="image/png" srcset="Images\Code\p6_movieList.png">
-                                <img src="Images\Code\p6_movieList.png" alt="Movie List">
-                            </picture>
-                        </a>
-                    </div>
+            <div class="row-reverse">
+                <div class="text-group">
+                    <p class="description">The list of movies will be displayed here where the movie name, genre, year
+                        released and age rating is displayed. It is a scrollable list thus if there are many movies
+                        inserted into the list,
+                        the user will be able to scroll through. The age ratings are taken from a website using an API
+                        to fetch and display the icons.</p>
+                </div>
+                <div class="img-group">
+                    <a target="_blank" href="Images\Code\p6_movieList.webp">
+                        <img src="Images\Code/movieList/movieListDetail.webp" alt="Movie List">
+                    </a>
                     <p class="img-desc">Movie List</p>
                 </div>
+            </div>
 
-                <div class="mySlides fade">
-                    <div class="img-group">
-                        <a target="_blank" href="Images\Code\p6_movieFiltered.webp">
-                            <picture>
-                                <source type="image/webp" srcset="Images\Code\p6_movieFiltered.webp">
-                                <source type="image/png" srcset="Images\Code\p6_movieFiltered.png">
-                                <img src="Images\Code\p6_movieFiltered.png" alt="Movie List">
-                            </picture>
-                        </a>
-                    </div>
-                    <p class="img-desc">Movie List (Filtered)</p>
+            <div class="row">
+                <div class="text-group">
+                    <p class="description">The movie list can be filtered down to PG-13 age rating movies where all the
+                        kids-friendly movies will be shown. This feature allows users to easily find movies that they
+                        can play for their children or children in general.</p>
                 </div>
-                <!-- Dont touch -->
-                <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-arrow-left"></i></a>
-                <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-arrow-right"></i></a>
-                <br>
-                <div style="text-align: center;">
-                    <!-- Change this -->
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                <div class="img-group">
+                    <a target="_blank" href="Images\Code/movieList/movieListFilter.webp">
+                        <img src="Images\Code/movieList/movieListFilter.webp" alt="Movie List (filtered)">
+                    </a>
+                    <p class="img-desc">Movie List (filtered)</p>
                 </div>
             </div>
+
 
         </div>
     </section>
@@ -127,7 +119,7 @@
             <div class="footer-border">
                 <div class="footer-content">
                     <div class="footer-links footer-group">
-                        <h2>Quick Links</h2>
+                        <h3>Quick Links</h3>
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
@@ -135,7 +127,7 @@
                         </ul>
                     </div>
                     <div class="footer-contact footer-group">
-                        <h2>Contact</h2>
+                        <h3>Contact</h3>
                         <ul>
                             <li><a href="mailto: syariman.2005@gmail.com"><i class="c-icon fa-solid fa-envelope"></i>
                                     syariman.2005@gmail.com</a></li>
@@ -153,8 +145,6 @@
             </div>
         </div>
     </section>
-
-    <script src="slider.js"></script>
 </body>
 
 </html>
