@@ -7,148 +7,17 @@
     <meta name="description" content="Aiman's tech portfolio">
     <title>Aiman's Portfolio</title>
     <!-- css link -->
-    <style type="text/css">
-        /* **************************** */
-        /* Defaults */
-        /* **************************** */
-
-        :root {
-            --dark-gray: rgb(24, 24, 24);
-            --highlight: #f8f2bf;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background: var(--dark-gray);
-            position: relative;
-        }
-
-        * {
-            font-family: 'Poppins', sans-serif;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        /* width */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: none;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 20px;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-
-        /* **************************** */
-        /* Navbar */
-        /* **************************** */
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
-
-        .hamburger {
-            display: none;
-            font-size: 24px;
-            user-select: none;
-            transition: 0.6s;
-        }
-
-        .nav-links {
-            padding: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
-        .nav-links [type=checkbox] {
-            display: none;
-        }
-
-        .menu {
-            display: flex;
-            background: rgba(0, 0, 0, 0.9);
-            border: 2px solid rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            overflow: hidden;
-
-            .menu-box {
-                padding: 10px;
-            }
-
-            .link {
-                color: white;
-            }
-
-            .active {
-                background-color: white;
-
-                .link {
-                    color: black;
-                }
-            }
-
-            .menu-box:hover {
-                background-color: white;
-                transition: 0.6s;
-
-                .link {
-                    color: black;
-                }
-
-            }
-
-        }
-    </style>
+    <style type="text/css"></style>
     <link rel="stylesheet" href="Stylesheet/style_project.css">
     <link rel="preload" as="style" href="Stylesheet/style_default.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="Stylesheet/style_default.css">
     </noscript>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/5983ad6ac6.js" crossorigin="anonymous" async></script>
 </head>
 
 <body>
-    <!-- back -->
-    <div class="top-left">
-        <a href="library.html" class="back">
-            <p>
-                < All projects</p>
-        </a>
-    </div>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-links">
@@ -163,6 +32,14 @@
             </div>
         </div>
     </nav>
+
+    <!-- back -->
+    <div class="top-left">
+        <a href="library.html" class="back">
+            <p>
+                < All projects</p>
+        </a>
+    </div>
 
     <section class="main-content">
         <h1 class="title">Basic Reservation App</h1>
@@ -190,13 +67,9 @@
                         href="https://github.com/aymanlerr/L04_Reservation">Click here</a></p>
             </div>
             <div class="img-group">
-                <a target="_BLANK" href="Images/Code/p1_reservationApp.webp">
-                    <picture>
-                        <source type="image/webp" srcset="Images/Code/p1_reservationApp.webp">
-                        <source type="image/png" srcset="Images/Code/p1_reservationApp.png">
-                        <img class="feature-img" src="Images/Code/p1_reservationApp.png"
-                            alt="basic reservation app interface" />
-                    </picture>
+                <a target="_BLANK" href="Images/Code/reservationApp.webp">
+                    <img class="feature-img" src="Images/Code/reservationApp.webp"
+                        alt="basic reservation app interface" />
                 </a>
             </div>
         </div>
